@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Calcolatrice </title>
+        <style>
+            body {
+                background-color: aliceblue;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 30px;
+            }
+
+            form {
+                display: inline-block;
+            }
+
+            button {
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: rgb(157, 192, 30);
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 55px;
+                height: 55px;
+                opacity: 0.6;
+                transition: 0.5s;
+                margin-top: 10px;
+            }
+
+            button:hover {
+                opacity: 1;
+                transition: 0.5s;
+            }
+
+            form {
+                background: #edf2d7;
+                width: 350px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                min-height: 50px;
+            }
+
+            input {
+                margin-bottom: 10px;
+                height: 35px;
+                width: 100%;
+            }
+
+            button, input {
+                font-size: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <h1> Calcolatrice </h1>
+            <form>
+                <input type="text" id="espressione" required> <br>
+                <button type="button" onclick="valore('1')">1</button>
+                <button type="button" onclick="valore('2')">2</button>
+                <button type="button" onclick="valore('3')">3</button>
+                <button type="button" onclick="valore('4')">4</button>
+                <button type="button" onclick="valore('5')">5</button>
+                <button type="button" onclick="valore('6')">6</button>
+                <button type="button" onclick="valore('7')">7</button>
+                <button type="button" onclick="valore('8')">8</button>
+                <button type="button" onclick="valore('9')">9</button>
+                <button type="button" onclick="valore('0')">0</button>
+                <button type="button" onclick="operando('+')">➕</button>
+                <button type="button" onclick="operando('-')">➖</button>
+                <button type="button" onclick="operando('*')">✖</button>
+                <button type="button" onclick="operando('/')">➗</button>
+                <button type="button" onclick="operando('(')">(</button>
+                <button type="button" onclick="operando(')')">)</button>
+                <button type="button" onclick="operando('^')">^</button>
+                <button type="button" onclick="operando('!')">!</button>
+                <button type="button" onclick="operando('%')">%</button>
+                <button type="button" onclick="pulisci()">C</button>
+                <button type="button" onclick="rimuovi()">⬅</button>
+                <button type="button" onclick="calcola()">=</button>
+            </form>
+        </center>
+
+        <script>
+            function calcola() {
+                let input = document.getElementById("espressione").value.trim();
+
+                if (!input) {
+                    alert("Compila tutti i campi");
+                    return;
+                }
+
+                console.log(input);
+
+                try {
+                    input = input.replace(/\^/g, "**");
+
+                    let risultato = eval(input);
+                    document.getElementById("espressione").value = risultato;
+                } catch (error) {
+                    alert("Espressione non valida!");
+                }
+            }
+
+            function operando(operazione) {
+                let input = document.getElementById("espressione").value.trim();
+
+                if (input.length === 0 && (operazione === '*' || operazione === '/' || operazione === '%' || operazione === '!' || operazione === '^' || operazione === ')')) {
+                    return;
+                }
+
+                let ultimoCarttere = input.charAt(input.length - 1);
+
+                if (ultimoCarttere != '+' && ultimoCarttere != '-' && ultimoCarttere != '*' && ultimoCarttere != '/') {
+                    document.getElementById("espressione").value += operazione;
+                }
+            }
+
+            function valore(n) {
+                document.getElementById("espressione").value += n;
+            }
+
+            function pulisci() {
+                document.getElementById("espressione").value = "";
+            }
+
+            function rimuovi() {
+                let inputField = document.getElementById("espressione");
+                let input = inputField.value;
+
+                if (input.length === 0) {
+                    return;
+                }
+                
+                inputField.value = input.slice(0, - 1);
+            }
+        </script>
+    </body>
+
+</html>

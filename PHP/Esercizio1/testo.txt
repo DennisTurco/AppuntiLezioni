@@ -1,0 +1,10 @@
+A partire dai file pfp funzionanti allegati in Teams implementare le seguenti pagine in web (html/php):
+Una Homepage.html con le seguenti funzionalità :
+[ X ] Inserimento di un nuovo personaggio (addDinamico.php)
+[ X ] cancellazione di un personaggio (riempire in modo dinamico casella di scelta (SELECT) dalla tabella personaggi) (deletePersonaggio.php)
+[ X ] Visualizzare in una tabella, o fuori tabella, l'elenco dei personaggi presenti (visualizzaPersonaggi.php)
+[ X ] Data una casata in input visualizzare i personaggi appartenenti alla casata (stampaCasataInput.php)
+[ X ] Ricercare i personaggi che nel proprio nome abbiano sia il carattere 'y' che il carattere 'h'. Stampare nome del personaggio e nome casata (stampaCasataPersonaggio.php)
+[ ?? ] Ricercare i personaggi (form di input che permetta l'inserimento del nome) che nel proprio nome abbiano sia il carattere 'y' che il carattere 'h'. Stampare nome del personaggio e nome casata (stampaCasataPersonaggio2.php)
+[ X ] stampare per ogni casata il numero di personaggi che le appartengono in ordine decrescente di conteggio (numeroPersonaggiPerCasata.php)
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Calcolatrice </title>
+        <style>
+            body {
+                background-color: aliceblue;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 30px;
+            }
+
+            form {
+                display: inline-block;
+            }
+
+            button {
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: rgb(157, 192, 30);
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 55px;
+                height: 55px;
+                opacity: 0.6;
+                transition: 0.5s;
+                margin-top: 10px;
+            }
+
+            button:hover {
+                opacity: 1;
+                transition: 0.5s;
+            }
+
+            form, p {
+                background: #edf2d7;
+                width: 350px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                min-height: 50px;
+            }
+
+            input {
+                margin-bottom: 10px;
+                height: 35px;
+                width: 100%;
+            }
+
+            button, input {
+                font-size: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <h1> Calcolatrice </h1>
+            <form>
+                <label for="valore1">Valore1 <input type="number" id="valore1" required> </label> <br>
+                <label for="valore2">Valore2 <input type="number" id="valore2" required> </label> <br>
+                <button type="button" onclick="calcola('+')">➕</button>
+                <button type="button" onclick="calcola('-')">➖</button>
+                <button type="button" onclick="calcola('*')">✖</button>
+                <button type="button" onclick="calcola('/')">➗</button>
+            </form>
+
+            <p id="risultato"></p>  
+        </center>
+
+        <script>
+            function calcola(operazione) {
+                let n1 = document.getElementById("valore1").value;
+                let n2 = document.getElementById("valore2").value;
+
+                if (!n1 || !n2) {
+                    alert("Compila tutti i campi");
+                    return;
+                }
+
+                n1 = parseFloat(n1);
+                n2 = parseFloat(n2);
+
+                let ris;
+                switch(operazione) {
+                    case '+':
+                        ris = n1 + n2;
+                        break;
+                    case '-':
+                        ris = n1 - n2;
+                        break;
+                    case '*':
+                        ris = n1 * n2;
+                        break;
+                    case '/':
+                        if (n2 === 0) {
+                            alert("Impossibile dividere per 0");
+                            return;
+                        } 
+                        ris = n1 / n2;
+                        break;
+                }
+
+                document.getElementById("risultato").innerText = "Risultato = " + ris;
+            }
+        </script>
+    </body>
+
+</html>

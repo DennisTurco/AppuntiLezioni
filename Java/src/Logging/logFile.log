@@ -1,0 +1,8 @@
+10/04/2025 19:34:17 [INFO] Messaggio informativo
+10/04/2025 19:34:17 [WARNING] Messaggio di avvertimento
+10/04/2025 19:34:17 [SEVERE] Messaggio di errore grave
+10/04/2025 19:34:17 [CONFIG] Messaggio config
+10/04/2025 19:34:17 [FINE] log di debug
+10/04/2025 19:34:17 [FINER] log di debug
+10/04/2025 19:34:17 [FINEST] log di debug
+10/04/2025 19:34:17 [SEVERE] Errore durante il calcolo: 

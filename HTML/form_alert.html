@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form con Alert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+        }
+        label, input, textarea, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        textarea {
+            height: 80px;
+        }
+        button {
+            background: rgb(7, 158, 103);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Inserisci il tuo nome e un messaggio</h2>
+
+    <form id="mioForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="messaggio">Messaggio:</label>
+        <textarea id="messaggio" name="messaggio" required></textarea>
+
+        <button type="button" onclick="mostraDati()">Invia</button>
+    </form>
+
+    <script>
+        function mostraDati() {
+            // Legge i valori dai campi del form
+            let nome = document.getElementById("nome").value;
+            let messaggio = document.getElementById("messaggio").value;
+
+            // Controllo se i campi sono vuoti
+            if (nome.trim() === "" || messaggio.trim() === "") {
+                alert("Compila tutti i campi!");
+                return;
+            }
+
+            // Mostra il messaggio in un alert
+            alert("Nome: " + nome + "\nMessaggio: " + messaggio);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-13 08:32:55 PM"/>
+        <attribute name="created" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA4OjEyOjMzIFBNOzI1NTY="/>
+        <attribute name="edited" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA4OjMyOjU1IFBNOzI7MjY3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ricerca valore maggiore nel vettore/array"/>
+            <declare name="vett" type="Real" array="True" size="5"/>
+            <output expression="&quot;Inserisci 5 numeri: &quot;" newline="True"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="vett[i]"/>
+            </for>
+            <declare name="max" type="Real" array="False" size=""/>
+            <assign variable="max" expression="vett[0]"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="max &lt; vett[i]">
+                    <then>
+                        <assign variable="max" expression="vett[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Valore maggiore: &quot;" newline="False"/>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

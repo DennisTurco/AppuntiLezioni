@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Età</title>
+</head>
+<body>
+
+    <h1>Calcola la tua età</h1>
+
+    <form>
+        <label>Nome: <input type="text" id="nome" required></label><br><br>
+        <label>Cognome: <input type="text" id="cognome" required></label><br><br>
+        <label>Anno di nascita: <input type="number" id="annoNascita" min="1900" max="2024" required></label><br><br>
+        <button type="button" onclick="calcolaEta()">Calcola</button>
+    </form>
+
+    <p id="risultato"></p>
+
+    <script>
+        function calcolaEta() {
+            let nome = document.getElementById("nome").value;
+            let cognome = document.getElementById("cognome").value;
+            let annoNascita = document.getElementById("annoNascita").value;
+
+            if (!nome || !cognome || !annoNascita) {
+                alert("Compila tutti i campi!");
+                return;
+            }
+
+            let oggi = new Date();
+            let annoCorrente = oggi.getFullYear();
+            let eta = annoCorrente - annoNascita;
+            let anniMancanti = 100 - eta;
+
+            document.getElementById("risultato").innerText = 
+                `${nome} ${cognome} nato nel ${annoNascita} ha ${eta} anni e ne mancano ${anniMancanti} per raggiungere 100.`;
+        }
+    </script>
+
+</body>
+</html>

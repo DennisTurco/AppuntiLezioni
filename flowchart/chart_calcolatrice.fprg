@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-13 08:08:55 PM"/>
+        <attribute name="created" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA3OjQ4OjI5IFBNOzI1Njk="/>
+        <attribute name="edited" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA4OjA4OjU1IFBNOzI7MjY3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output:&#13;&#10;5&#13;&#10;+&#13;&#10;2&#13;&#10;= 7"/>
+            <declare name="somma, prodotto, divisione, sottrazione" type="Real" array="False" size=""/>
+            <declare name="valore1, valore2" type="Real" array="False" size=""/>
+            <declare name="scelta" type="String" array="False" size=""/>
+            <input variable="valore1"/>
+            <input variable="scelta"/>
+            <input variable="valore2"/>
+            <if expression="scelta == &quot;+&quot;">
+                <then>
+                    <assign variable="somma" expression="valore1 + valore2"/>
+                    <output expression="somma" newline="True"/>
+                </then>
+                <else>
+                    <if expression="scelta == &quot;/&quot;">
+                        <then>
+                            <assign variable="divisione" expression="valore1 / valore2"/>
+                            <output expression="divisione" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="scelta == &quot;*&quot;">
+                                <then>
+                                    <assign variable="prodotto" expression="valore1 * valore2"/>
+                                    <output expression="prodotto" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="scelta == &quot;-&quot;">
+                                        <then>
+                                            <assign variable="sottrazione" expression="valore1 - valore2"/>
+                                            <output expression="sottrazione" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

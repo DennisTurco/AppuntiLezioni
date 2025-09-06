@@ -1,0 +1,21 @@
+
+# Ignore Windows executables
+*.exe
+
+# Ignore all object file
+*.o
+
+# Ignore Java class files
+*.class
+
+# Ignore all Debug folders anywhere
+Debug/
+**/Debug/
+
+# Ignore all biud folders anywhere
+build/
+**/build/
+
+# Ignore all "output" directories anywhere
+output/
+**/output/

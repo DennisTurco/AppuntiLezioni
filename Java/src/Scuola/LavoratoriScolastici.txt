@@ -1,0 +1,4 @@
+Tracker TheBest,60.0,20.0,Non insegno nulla
+Carlo Guareschi,70.0,7.5,Religione
+AnnaMaria Incoronata,20.0,8.22,Segretaria Semplice
+Antonietta Pinetta,25.0,7.0,Segretaria Tirocinante

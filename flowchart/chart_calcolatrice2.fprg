@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-13 08:11:19 PM"/>
+        <attribute name="created" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA3OjQ4OjI5IFBNOzI1Njk="/>
+        <attribute name="edited" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTEzOzA4OjExOjE5IFBNOzQ7MjY3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output:&#13;&#10;5&#13;&#10;+&#13;&#10;2&#13;&#10;= 7"/>
+            <declare name="risultato" type="Real" array="False" size=""/>
+            <declare name="valore1, valore2" type="Real" array="False" size=""/>
+            <declare name="scelta" type="String" array="False" size=""/>
+            <input variable="valore1"/>
+            <input variable="scelta"/>
+            <input variable="valore2"/>
+            <if expression="scelta == &quot;+&quot;">
+                <then>
+                    <assign variable="risultato" expression="valore1 + valore2"/>
+                </then>
+                <else>
+                    <if expression="scelta == &quot;/&quot;">
+                        <then>
+                            <assign variable="risultato" expression="valore1 / valore2"/>
+                        </then>
+                        <else>
+                            <if expression="scelta == &quot;*&quot;">
+                                <then>
+                                    <assign variable="risultato" expression="valore1 * valore2"/>
+                                </then>
+                                <else>
+                                    <if expression="scelta == &quot;-&quot;">
+                                        <then>
+                                            <assign variable="risultato" expression="valore1 - valore2"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="risultato" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

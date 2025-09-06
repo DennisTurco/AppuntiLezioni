@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-14 10:10:30 AM"/>
+        <attribute name="created" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTE0OzA5OjMxOjM5IEFNOzI1NTA="/>
+        <attribute name="edited" value="ZGVubmlzO0RFTk5JUy1QQzsyMDIzLTAyLTE0OzEwOjEwOjMwIEFNOzQ7MjY0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vett" type="Real" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="inserimento"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="vett[i]"/>
+            </for>
+            <comment text="stampa"/>
+            <output expression="&quot;Prma di ordinare: &quot;" newline="False"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="vett[i]" newline="False"/>
+                <output expression="&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <comment text="ordinamento"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Real" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <for variable="j" start="0" end="4" direction="inc" step="1">
+                    <if expression="vett[i] &lt; vett[j]">
+                        <then>
+                            <assign variable="temp" expression="vett[i]"/>
+                            <assign variable="vett[i]" expression="vett[j]"/>
+                            <assign variable="vett[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="stampa"/>
+            <output expression="&quot;Dopo aver ordinato: &quot;" newline="False"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="vett[index]" newline="False"/>
+                <output expression="&quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
