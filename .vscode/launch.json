@@ -35,8 +35,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Utente/Desktop/Dennis/Lavoro/Ripetizioni/C++/cicli",
-      "program": "c:/Users/Utente/Desktop/Dennis/Lavoro/Ripetizioni/C++/cicli/build/Debug/outDebug",
+      "cwd": "c:/Users/Utente/Desktop/Dennis/Lavoro/Ripetizioni/C/esami/esame_morse",
+      "program": "c:/Users/Utente/Desktop/Dennis/Lavoro/Ripetizioni/C/esami/esame_morse/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

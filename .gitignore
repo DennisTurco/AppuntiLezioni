@@ -19,3 +19,7 @@ build/
 # Ignore all "output" directories anywhere
 output/
 **/output/
+
+# Ignore all "test" directories anywhere
+test/
+**/test/
