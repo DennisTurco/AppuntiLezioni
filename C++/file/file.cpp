@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    
+
     //Passo 1
     FILE *fp;  //dichiarazione file di nome fp
     char nomefile[32];
