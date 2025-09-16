@@ -38,8 +38,7 @@ int main()
         return -1;
     }
 
-    char buffer[256];
-    fgets(buffer, sizeof(buffer), file);
+    fscanf(file, "%*[^\n]\n"); // skippa la prima riga (header)
 
     for(int i=0; i<dim; i++){
         fscanf(file, "%[^,],%lf,%[^,],%u\n",dati[i].nome,&dati[i].diametro,dati[i].massa,&dati[i].satelliti);
@@ -47,7 +46,6 @@ int main()
     }
 
     fclose(file);
-
 
     // SLAVATAGGIO NEL FILE BINARIO
     FILE *bin = fopen("../planet.bin", "wb");
@@ -57,7 +55,7 @@ int main()
         return -1;
     }
 
-    fwrite(dati, sizeof(struct Pianeta), n, bin);
+    fwrite(dati, sizeof(struct pianeti), dim, bin);
 
     fclose(bin);
     free(dati);
