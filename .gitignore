@@ -23,3 +23,12 @@ output/
 # Ignore all "test" directories anywhere
 test/
 **/test/
+
+obj/
+**/obj/
+
+bin/
+**/bin/
+
+.vs/
+**/.vs/
