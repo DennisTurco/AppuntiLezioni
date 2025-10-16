@@ -28,7 +28,7 @@ int main () {
         cin >> nomi[i];
         cout << "Cognome: ";
         cin >> cognomi[i];
-        cout << "Età: ";
+        cout << "Eta': ";
         cin >> eta[i];
         for (int j = 0; j < 3; j++) {
             cout << "Voto " << j + 1 << ": ";
