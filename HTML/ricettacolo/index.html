@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ricettacolo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #0099cc;
+      color: white;
+      text-align: center;
+      padding: 1.2em 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em 2em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0099cc;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5em;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0099cc;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f8fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em 0;
+      color: #666;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ricettacolo</h1>
+  </header>
+
+  <main>
+    <h2>Benvenuto!</h2>
+    <p>Qui in seguito sono elencati i ricettacoli delle mie ricette preferite!</p>
+
+    <table>
+      <tr>
+        <th>Categoria</th>
+        <th>Piatto</th>
+        <th>Difficoltà</th>
+      </tr>
+
+      <tr>
+        <td>Antipasto</td>
+        <td>Tagliere di salumi</td>
+        <td>Facile</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Primo</td>
+        <td><a href="./taglietelle-ai-funghi.html">Tagliatelle ai funghi</a></td>
+        <td>Facile</td>
+      </tr>
+
+      <tr>
+        <td>Risotto allo zafferano</td>
+        <td>Medio</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3">Secondo</td>
+        <td>Petto d'anatra al forno</td>
+        <td>Difficile</td>
+      </tr>
+
+      <tr>
+        <td>Branzino al cartoccio</td>
+        <td>Medio</td>
+      </tr>
+
+      <tr>
+        <td>Guancialino di maiale</td>
+        <td>Medio</td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    &copy; 2025 - Ricettacolo
+  </footer>
+</body>
+</html>
