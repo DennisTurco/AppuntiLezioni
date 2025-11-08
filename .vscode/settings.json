@@ -62,7 +62,8 @@
     "numbers": "cpp",
     "stdlib.h": "c",
     "stdio.h": "c",
-    "time.h": "c"
+    "time.h": "c",
+    "set": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
