@@ -15,6 +15,8 @@ except ZeroDivisionError:
     print("impossibile eseguire la divisione")
 except IndexError:
     print("posizione lista non valida")
+finally:
+    print("Finally - Vengo sempre eseguito")
 
 risultato2 = n * d
 print(f"Risultato = {risultato2}")

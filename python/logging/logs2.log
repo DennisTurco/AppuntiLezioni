@@ -1,0 +1,3 @@
+2025-11-11 19:09:24,401 - DEBUG - Questo messaggio va solo nel file.
+2025-11-11 19:09:24,401 - INFO - Questo messaggio appare su console e file.
+2025-11-11 19:09:24,401 - ERROR - Errore critico!
