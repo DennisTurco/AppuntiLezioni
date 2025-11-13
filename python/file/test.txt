@@ -1,0 +1,4 @@
+Ciao come stai?
+questa è una seconda riga.
+Se abilitato UTF-8 puoi leggere quetso: è € ê̄ η
+Frase finale in append

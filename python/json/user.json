@@ -1,0 +1,7 @@
+{
+    "nome": "Nicolò",
+    "email": "mario@gmail.com",
+    "eta": 34,
+    "admin": false,
+    "lingue": ["Italiano", "Inglese"]
+}
