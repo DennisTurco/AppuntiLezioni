@@ -2,15 +2,14 @@ import keyboard
 import os
 import time
 
-# Posizione iniziale del carattere
+# pulisce e riposiziona il carattere
+def print_char(x, y):
+    os.system('cls')
+    print(f"\033[{y};{x}H{carattere}", end='', flush=True)
+
 x, y = 10, 5
 carattere = '*'
 
-def print_char(x, y):
-    print(f"\033[{y};{x}H{carattere}", end='', flush=True)
-
-# Pulisce e riposiziona
-os.system('cls')
 print_char(x, y)
 
 while not keyboard.is_pressed('esc'):
@@ -23,8 +22,7 @@ while not keyboard.is_pressed('esc'):
     elif keyboard.is_pressed('right'):
         x += 1
     
-    # Pulisce e riposiziona
-    os.system('cls')
     print_char(x, y)
     
-    time.sleep(0.05)  # evita di usare troppa CPU
+    # serve una leggera pausa altrimenti il carattere si muove come flash sullo schermo
+    time.sleep(0.1)
