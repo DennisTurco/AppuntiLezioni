@@ -18,6 +18,7 @@ private:
     bool gestione_spuntone();
     bool supporto_sotto() const;
     bool buca_piccola() const
+    void caduta();
 
 public:
     SonicLevel();

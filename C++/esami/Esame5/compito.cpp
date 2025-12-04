@@ -148,6 +148,17 @@ bool SonicLevel::buca_piccola() const {
     return (c == '=');
 }
 
+void SonicLevel::caduta() {
+    while (!supporto_sotto()) {
+        if (i_sonic == 0) break;
+        i_sonic--;
+
+        raccogli();
+
+        if (gestisci_spuntone()) return;
+    }
+}
+
 //FUNZIONI SECONDA PARTE
 SonicLevel& SonicLevel::spuntone(int i, int j){
     if(!gioco_fermo) return *this;
