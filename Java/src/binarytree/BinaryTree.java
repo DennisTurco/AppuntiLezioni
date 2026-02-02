@@ -1,7 +1,7 @@
 package binarytree;
 
 public class BinaryTree {
-    private Node<Integer> root; 
+    private Node<Integer> root;
 
     // la add e' quella che viene chiamata dal main
     public void add(int value) {
