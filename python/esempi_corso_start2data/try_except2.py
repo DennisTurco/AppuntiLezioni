@@ -1,4 +1,3 @@
-
 # la funzione deve lanciare un eccezione perche' altrimenti dovrebbe ritornare qualcosa
 # ma avendo un valore di ritorno float e non potendo eseguire il calcolo, allora meglio lanciare un eccezione
 def esegui_divisione(n: int, d: int) -> float:
@@ -7,7 +6,8 @@ def esegui_divisione(n: int, d: int) -> float:
     risultato = n / d
     return risultato
 
-try :
+
+try:
     numeratore = int(input("Numeratore: "))
     denominatore = int(input("Denominatore: "))
     risultato = esegui_divisione(numeratore, denominatore)
@@ -16,7 +16,6 @@ except ValueError:
     print("Valori immessi non ammissibili")
 except ZeroDivisionError as e:
     print(e)
-
 
 
 print("Programma terminato")

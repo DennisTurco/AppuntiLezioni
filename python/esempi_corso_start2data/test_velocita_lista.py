@@ -17,7 +17,7 @@ print("Calcoli - lista")
 # calcoliamo il tempo per ordinare con bubble sort (simulare situazione reale)
 start = time.time()
 for i in range(len(numeri1)):
-    for j in range(len(numeri1)-1):
+    for j in range(len(numeri1) - 1):
         if numeri1[j] > numeri1[j + 1]:
             numeri1[j], numeri1[j + 1] = numeri1[j + 1], numeri1[j]
 end = time.time()

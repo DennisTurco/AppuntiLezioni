@@ -1,6 +1,6 @@
-righe_da_copiare_sul_file = '''Ciao come stai?
+righe_da_copiare_sul_file = """Ciao come stai?
 questa è una seconda riga.
-Se abilitato UTF-8 puoi leggere quetso: è € ê̄ η'''
+Se abilitato UTF-8 puoi leggere quetso: è € ê̄ η"""
 
 with open("./python/file/test.txt", "w", encoding="UTF-8") as file:
     contenuto = file.write(righe_da_copiare_sul_file)

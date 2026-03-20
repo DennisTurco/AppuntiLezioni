@@ -11,7 +11,7 @@ studenti.append(s2)
 studenti.append(s3)
 
 for stud in studenti:
-    print(stud) # posso stampare l'oggetto studente perchè abbiamo definito il  metodo __str__
+    print(stud)  # posso stampare l'oggetto studente perchè abbiamo definito il  metodo __str__
 
 # proviamo il metodo __add__ della classe
 s4 = s1 + s2

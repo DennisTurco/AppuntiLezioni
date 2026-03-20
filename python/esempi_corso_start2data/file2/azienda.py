@@ -1,5 +1,6 @@
 from dipendente import Dipendente
 
+
 class Azienda:
     def __init__(self) -> None:
         self.dipendenti: list[Dipendente] = []

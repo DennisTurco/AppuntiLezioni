@@ -1,7 +1,7 @@
-lista = [] # dichiarazione lista vuota
+lista = []  # dichiarazione lista vuota
 
 for i in range(10):
-    lista.append(i) # metodo per aggiungere elementi nella lista
+    lista.append(i)  # metodo per aggiungere elementi nella lista
 
 print(lista)
 

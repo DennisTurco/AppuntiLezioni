@@ -4,6 +4,7 @@
 # run time (a tempo di esecuzione)
 # es. x = int(input("inserire valore"))
 
+
 def main():
     x = int(input("righe: "))
     y = int(input("colonne: "))
@@ -47,8 +48,11 @@ def main():
     # stampa matrice
     for i in range(x):
         for j in range(y):
-            print(f"{spirale[i][j]:2} ", end=" ") # end mi serve altrimenti ad ogni stampa va a capo. Mentre ':2' serve per renderlo piu bellino
+            print(
+                f"{spirale[i][j]:2} ", end=" "
+            )  # end mi serve altrimenti ad ogni stampa va a capo. Mentre ':2' serve per renderlo piu bellino
         print()
+
 
 if __name__ == "__main__":
     main()

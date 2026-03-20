@@ -1,5 +1,6 @@
 from azienda import Azienda
 
+
 class CsvHelper:
     def to_csv(self, filename: str, azienda: Azienda, header: bool = False):
         with open(filename, "w", encoding="UTF-8") as file:

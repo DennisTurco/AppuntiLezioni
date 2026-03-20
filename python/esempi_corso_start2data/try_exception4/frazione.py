@@ -1,5 +1,6 @@
 from null_division_frazione import NullDivisionFrazione
 
+
 class Frazione:
     def __init__(self, numeratore: int, denominatore: int) -> None:
         if denominatore == 0:

@@ -1,6 +1,10 @@
 import logging
 
-logging.basicConfig(level=logging.DEBUG, filename="./python/logging/logs.log", format="%(asctime)s - [%(levelname)s] (%(filename)s:%(lineno)d) - %(message)s")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="./python/logging/logs.log",
+    format="%(asctime)s - [%(levelname)s] (%(filename)s:%(lineno)d) - %(message)s",
+)
 
 logging.info("Programma iniziato")
 

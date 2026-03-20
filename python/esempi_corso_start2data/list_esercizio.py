@@ -16,8 +16,8 @@ print(numeri)
 
 # ricerca valore massimo
 # logica: https://appuntifacili.it/informatica/cpp/4_array-monodimensionali#54-ricerca-massimominimo
-max = numeri[0] # max parte dal primo elemento della lista
-for i in range(len(numeri)): # va bene anche se si mette 'dimensione'
+max = numeri[0]  # max parte dal primo elemento della lista
+for i in range(len(numeri)):  # va bene anche se si mette 'dimensione'
     if numeri[i] > max:
         max = numeri[i]
 

@@ -13,12 +13,7 @@ print(contenuto["email"])
 
 ################################################
 
-persona: dict[str, Any] = {
-    "nome": "Giulia",
-    "età": 30,
-    "linguaggi": ["Python", "Go"],
-    "isAdmin": True
-}
+persona: dict[str, Any] = {"nome": "Giulia", "età": 30, "linguaggi": ["Python", "Go"], "isAdmin": True}
 
 with open("./python/json/persona.json", "w", encoding="UTF-8") as file:
     json.dump(persona, file)

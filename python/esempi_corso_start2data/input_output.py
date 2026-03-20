@@ -1,13 +1,13 @@
 # Commenti
 # commento a linea singola
-'''
+"""
 Commento a
 piu' linee
-'''
+"""
 
 # output a schermo
 print("Hello World!")
-print('Hello World2!!!\n') # \n per andare a capo
+print("Hello World2!!!\n")  # \n per andare a capo
 print(45)
 print("89 + 11")
 print(89 + 11)
@@ -19,8 +19,8 @@ print("Come va la vita?")
 x = 10
 y = 12.4
 z = x + y
-print("Il risultato dell'espression è: z") # NO
-print(f"Il risultato dell'espression è: {z}") # SI
+print("Il risultato dell'espression è: z")  # NO
+print(f"Il risultato dell'espression è: {z}")  # SI
 
 ################################################################
 

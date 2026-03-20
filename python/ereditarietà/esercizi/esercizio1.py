@@ -3,6 +3,7 @@
 from abc import ABC
 from datetime import datetime
 
+
 class Veicolo(ABC):
     def __init__(self, marca, modello, anno, targa):
         self.marca = marca
@@ -11,10 +12,13 @@ class Veicolo(ABC):
         self.targa = targa
 
     def descrizione(self):
-        return f"Descrizione veicolo: marca: {self.marca}, modello: {self.modello}, anno: {self.anno}, targa: {self.targa}"
+        return (
+            f"Descrizione veicolo: marca: {self.marca}, modello: {self.modello}, anno: {self.anno}, targa: {self.targa}"
+        )
 
     def calcola_costo_manutenzione(self):
         return int(100)
+
 
 class Moto(Veicolo):
     def __init__(self, marca, modello, anno, targa, cilindrata):
@@ -27,6 +31,7 @@ class Moto(Veicolo):
     def descrizione(self):
         return super().descrizione() + f", cilindrata: {self.cilindrata}"
 
+
 class Camion(Veicolo):
     def __init__(self, marca, modello, anno, targa, portata_massima):
         super().__init__(marca, modello, anno, targa)
@@ -37,6 +42,7 @@ class Camion(Veicolo):
 
     def descrizione(self):
         return super().descrizione() + f", portata massima: {self.portata_massima}"
+
 
 class Auto(Veicolo):
     def __init__(self, marca, modello, anno, targa, tipo_carburante, numero_porte):
@@ -51,7 +57,7 @@ class Auto(Veicolo):
         return super().descrizione() + f", carburante: {self.tipo_carburante}, porte: {self.numero_porte}"
 
 
-#PARCO VEICOLI ________________________
+# PARCO VEICOLI ________________________
 class ParcoVeicoli:
     def __init__(self):
         self.veicoli = []
@@ -71,12 +77,11 @@ class ParcoVeicoli:
 
 
 if __name__ == "__main__":
-
     parcheggio = ParcoVeicoli()
 
-    macchina_rossa=Auto("Lancia", "Y", 2012, "BBBB","diesel", 3)
-    camion_blu=Camion("Iveco", "Leoncino", 1998, "CCCC", 3000)
-    scooter_nero=Moto("Piaggio","Liberty",2010,"AAAAA",50)
+    macchina_rossa = Auto("Lancia", "Y", 2012, "BBBB", "diesel", 3)
+    camion_blu = Camion("Iveco", "Leoncino", 1998, "CCCC", 3000)
+    scooter_nero = Moto("Piaggio", "Liberty", 2010, "AAAAA", 50)
 
     parcheggio.aggiungi_veicolo(scooter_nero)
     parcheggio.aggiungi_veicolo(macchina_rossa)
@@ -86,7 +91,7 @@ if __name__ == "__main__":
 
     parcheggio.stampa_veicoli()
 
-    '''
+    """
     Anzichè stampare i costi singolarmente: non tanto bello -> se avessimo 1000 auto, ci mettiamo a mettere 1000 chiamate con 1000 print??
     Meglio usare un for...
 
@@ -98,9 +103,9 @@ if __name__ == "__main__":
 
         costo3 = camion_blu.calcola_costo_manutenzione()
         print(f"Costo manutenzione: {costo3}")
-    '''
+    """
 
-    for i in range(0, len(parcheggio.veicoli)): # iterando sui veicoli
+    for i in range(0, len(parcheggio.veicoli)):  # iterando sui veicoli
         costo = parcheggio.veicoli[i].calcola_costo_manutenzione()
         print(f"Costo manutenzione: {costo}")
 

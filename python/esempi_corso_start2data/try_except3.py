@@ -1,4 +1,4 @@
-while (True):
+while True:
     try:
         numeratore = int(input("Numeratore: "))
         denominatore = int(input("Denominatore: "))

@@ -1,4 +1,3 @@
-
 n = int(input("Numeratore: "))
 d = int(input("Denominatore: "))
 

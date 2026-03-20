@@ -1,4 +1,3 @@
-
 from frazione import Frazione
 from null_division_frazione import NullDivisionFrazione
 

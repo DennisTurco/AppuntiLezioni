@@ -22,7 +22,7 @@ print()
 # stampo tutti i numeri da 0 a 30 con passo 1, ma pari. Se incontera il 17 termina il ciclo
 for i in range(31):
     if i == 17:
-        break # si esce dal ciclo
+        break  # si esce dal ciclo
     if i % 2 == 0:
         print(i, end=" ")
 

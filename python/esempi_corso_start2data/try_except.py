@@ -1,6 +1,3 @@
-
-
-
 try:
     numeratore = int(input("Numeratore: "))
     denominatore = int(input("Denominatore: "))

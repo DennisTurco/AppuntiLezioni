@@ -11,9 +11,9 @@ print(numbers_ordered)
 
 
 student_tuples = [
-    ('john', 'A', 15),
-    ('jane', 'B', 12),
-    ('dave', 'B', 10),
+    ("john", "A", 15),
+    ("jane", "B", 12),
+    ("dave", "B", 10),
 ]
 lista_ordinata = sorted(student_tuples, key=lambda x: x[2])
 print(lista_ordinata)

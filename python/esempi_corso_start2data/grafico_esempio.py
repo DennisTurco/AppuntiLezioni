@@ -41,11 +41,11 @@ for n in sizes:
     dict_times.append(time.time() - start)
 
 # Grafico
-plt.figure(figsize=(10,6))
-plt.plot(sizes, list_times, marker='o', label='List')
-plt.plot(sizes, tuple_times, marker='s', label='Tuple')
-plt.plot(sizes, set_times, marker='^', label='Set')
-plt.plot(sizes, dict_times, marker='x', label='Dictionary')
+plt.figure(figsize=(10, 6))
+plt.plot(sizes, list_times, marker="o", label="List")
+plt.plot(sizes, tuple_times, marker="s", label="Tuple")
+plt.plot(sizes, set_times, marker="^", label="Set")
+plt.plot(sizes, dict_times, marker="x", label="Dictionary")
 plt.xlabel("Number of items")
 plt.ylabel("Time (seconds)")
 plt.title("Time Performance: List, Tuple, Set, Dictionary")

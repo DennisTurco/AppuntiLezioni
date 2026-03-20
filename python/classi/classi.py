@@ -1,12 +1,13 @@
 # una classe è una sorta di contenitori di informazioni preferibilmente omogenee.
 # Contiene: Attributi e Metodi
 
+
 class Gatto:
-    nazionalita = "Italia" # attributo della classe
+    nazionalita = "Italia"  # attributo della classe
 
     # metodo costruttore -> ci permette di istanziare (costruire un oggetto vero e proprio)
     def __init__(self, n, c, p):
-        self.nome = n # self indica che sto facendo riferimento ad un'informazione di questa classe
+        self.nome = n  # self indica che sto facendo riferimento ad un'informazione di questa classe
         self.colore = c
         self.peso = p
 
@@ -17,12 +18,13 @@ class Gatto:
     def stampa(self):
         print(f"Nome: {self.nome}, colore: {self.colore}, peso: {self.peso}, nazionalità: {self.nazionalita}")
 
+
 ##################################################################
 
 # per creare un gatto devo istanziarlo
 gatto1 = Gatto("Gianni", "Rosa", 12.4)
 gatto1.stampa()
-print(gatto1) # chiama automaticamente il metodo __str__()
+print(gatto1)  # chiama automaticamente il metodo __str__()
 print(gatto1.nome)
 print(gatto1.nazionalita)
 

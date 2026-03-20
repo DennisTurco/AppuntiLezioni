@@ -11,7 +11,6 @@ while x < 1000:
 print(f"\n{x}")
 
 
-
 # Versione 2
 
 x = 3

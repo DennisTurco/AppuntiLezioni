@@ -10,6 +10,7 @@ except:
     subprocess.call([sys.executable, "-m", "pip", "install", "plyer"])
     from plyer import notification
 
+
 class GameManager(Arena):
     def __init__(self, gameGUI, size=(223, 255)):
         super().__init__(size)
@@ -18,16 +19,16 @@ class GameManager(Arena):
         self.InitialSpawn()
         self.last_spawn_time = time.time()
         self.initial_time = time.time()
-        
+
     def game_over(self):
         self._gameGUI.game_over()
-    
+
     def game_won(self):
         self._gameGUI.game_won()
-    
+
     def InitialSpawn(self):
-        super().spawn(Wall((-5, 0), (1, 500))) # muro sx
-        super().spawn(Wall((228, 0), (1, 500))) # muro dx
+        super().spawn(Wall((-5, 0), (1, 500)))  # muro sx
+        super().spawn(Wall((228, 0), (1, 500)))  # muro dx
         super().spawn(OilBarrel())
         super().spawn(Jumpy(self))
         super().spawn(Princess())
@@ -142,11 +143,12 @@ class GameManager(Arena):
             super().spawn(Barrel())  # Effettua lo spawn di un nuovo Barrel
             self.last_spawn_time = current_time  # Aggiorna last_spawn_time al tempo attuale
 
+
 class GameGUI:
     def __init__(self):
         self._game = GameManager(self)
         g2d.init_canvas(self._game.size())
-        g2d.main_loop(self.tick) 
+        g2d.main_loop(self.tick)
 
     def toast_message(self, title, message):
         notification.notify(
@@ -163,7 +165,7 @@ class GameGUI:
 
     def game_won(self):
         final_time = time.time()
-        ris = round(final_time-self._game.initial_time, 2)
+        ris = round(final_time - self._game.initial_time, 2)
         print(f"You Won!/nTime: {ris} seconds")
         self.toast_message("Message", f"You Won! Time: {ris} seconds")
         self.restore_the_screen()
@@ -173,24 +175,35 @@ class GameGUI:
             self._game.kill(a)
         time.sleep(1)
         self._game.InitialSpawn()
-    
+
     def tick(self):
-        
+
         self._game.BarrelSpawner()
-        
+
         g2d.clear_canvas()
-        
-        g2d.draw_image_clip("C:/Users/Utente/Desktop/Ripetizioni/python/Marco/DonkeyKong/img/donkey-kong-bg.png", (0, 0), (0, 0), self._game.size())
-        
+
+        g2d.draw_image_clip(
+            "C:/Users/Utente/Desktop/Ripetizioni/python/Marco/DonkeyKong/img/donkey-kong-bg.png",
+            (0, 0),
+            (0, 0),
+            self._game.size(),
+        )
+
         for a in self._game.actors():
             if a.sprite() != None:
-                g2d.draw_image_clip("C:/Users/Utente/Desktop/Ripetizioni/python/Marco/DonkeyKong/img/donkey-kong.png", a.pos(), a.sprite(), a.size())
+                g2d.draw_image_clip(
+                    "C:/Users/Utente/Desktop/Ripetizioni/python/Marco/DonkeyKong/img/donkey-kong.png",
+                    a.pos(),
+                    a.sprite(),
+                    a.size(),
+                )
             else:
                 pass
-        
+
         self._game.tick(g2d.current_keys())
 
-#TODO: remove full collision with the platform
+
+# TODO: remove full collision with the platform
 class Jumpy(Actor):
     def __init__(self, game):
         self._game = game
@@ -199,13 +212,13 @@ class Jumpy(Actor):
         self._speed, self._jump = 4, -5
         self._dx, self._dy = self._speed, 0
         self._climbing = False
-        
+
     def move(self, arena):
         keys = arena.current_keys()
         princess = barrel = platform = ladder = None
-        
+
         base_x, base_y = self._x, self._y + self._h  # Coordinate della base del personaggio
-        
+
         for other in arena.collisions():
             if isinstance(other, Barrel):
                 barrel = other
@@ -214,20 +227,20 @@ class Jumpy(Actor):
             elif isinstance(other, Ladder):
                 ladder = other
             elif isinstance(other, Platform):
-                platform = other         
-        
+                platform = other
+
         if platform:
             self.pos()
-        
+
         if barrel:
             self._game.game_over()
-        
+
         if princess:
             self._game.game_won()
-        
+
         if platform and ladder and ("ArrowUp" in keys or "ArrowDown" in keys):
             self._climbing = True
-        
+
         if "ArrowLeft" in keys or "ArrowRight" in keys:
             self._climbing = False
 
@@ -239,20 +252,23 @@ class Jumpy(Actor):
             elif "ArrowDown" in keys and abs(ladder.pos()[0] - self.pos()[0]) <= 4:  # Tolleranza di 4 pixel
                 self._y += self._speed
         else:
-
-            if platform and base_y >= platform.pos()[1] and base_x >= platform.pos()[0] and base_x <= platform.pos()[0] + platform.size()[0]:
-                
-                #TODO: fixhere
+            if (
+                platform
+                and base_y >= platform.pos()[1]
+                and base_x >= platform.pos()[0]
+                and base_x <= platform.pos()[0] + platform.size()[0]
+            ):
+                # TODO: fixhere
                 # Logica per la collisione con la piattaforma
                 self._y = platform.pos()[1] - self._h  # Imposta il personaggio sopra la piattaforma
-                
+
                 if self._dy >= 0:
                     self._dy = 0  # Impedisce il movimento verticale se il personaggio è sulla piattaforma
                     if "Spacebar" in keys:
-                        self._dy = self._jump  # jump 
+                        self._dy = self._jump  # jump
 
             arena_w, arena_h = arena.size()
-            
+
             # Controllo se il personaggio è contro il bordo
             if (self._x + self._w >= arena_w) and ("ArrowRight" in keys):
                 self._x = arena_w - self._w  # Impedisce al personaggio di superare il bordo destro
@@ -263,7 +279,7 @@ class Jumpy(Actor):
                     self._x = (self._x - self._dx) % arena_w
                 elif "ArrowRight" in keys:
                     self._x = (self._x + self._dx) % arena_w
-                
+
             self._y = self._y + self._dy
             self._dy += 1  # gravity
 
@@ -279,13 +295,14 @@ class Jumpy(Actor):
         else:
             return 183, 3
 
+
 class Princess(Actor):
     def __init__(self):
         self._x, self._y = 100, 35
         self._w, self._h = 14, 21
-        
+
     def move(self, arena):
-        pass   
+        pass
 
     def pos(self):
         return self._x, self._y
@@ -296,6 +313,7 @@ class Princess(Actor):
     def sprite(self):
         return 184, 126
 
+
 class Donkey(Actor):
     def __init__(self):
         self._x, self._y = 20, 55
@@ -304,10 +322,10 @@ class Donkey(Actor):
         self._swap_sprite2 = False
         self._swap_sprite3 = False
         self._last_sprite_change = time.time()  # Registra il tempo dell'ultimo cambio di sprite
-        
+
     def move(self, arena):
         current_time = time.time()
-        
+
         # Verifica se è passato 1 secondo dall'ultimo cambio di sprite
         if current_time - self._last_sprite_change >= 1:
             # Cambia lo sprite
@@ -323,9 +341,9 @@ class Donkey(Actor):
                 self._swap_sprite1 = True
                 self._swap_sprite2 = False
                 self._swap_sprite3 = False
-            
+
             # Aggiorna il tempo dell'ultimo cambio di sprite
-            self._last_sprite_change = current_time  
+            self._last_sprite_change = current_time
 
     def pos(self):
         return self._x, self._y
@@ -344,6 +362,7 @@ class Donkey(Actor):
             self._w = 42
             return 254, 152
 
+
 class Wall(Actor):
     def __init__(self, pos, size):
         self._pos = pos
@@ -361,6 +380,7 @@ class Wall(Actor):
     def sprite(self):
         return None
 
+
 class OilBarrel(Actor):
     def __init__(self):
         self._pos = 18, 223
@@ -370,7 +390,7 @@ class OilBarrel(Actor):
 
     def move(self, arena):
         current_time = time.time()
-        
+
         # Verifica se è passato 1 secondo dall'ultimo cambio di sprite
         if current_time - self._last_sprite_change >= 0.5:
             # Cambia lo sprite
@@ -378,7 +398,7 @@ class OilBarrel(Actor):
                 self._swap_sprite = False
             else:
                 self._swap_sprite = True
-            
+
             # Aggiorna il tempo dell'ultimo cambio di sprite
             self._last_sprite_change = current_time
 
@@ -394,9 +414,14 @@ class OilBarrel(Actor):
         else:
             return 144, 256
 
-class Platform(Wall): pass
 
-class Ladder(Wall): pass
+class Platform(Wall):
+    pass
+
+
+class Ladder(Wall):
+    pass
+
 
 class Barrel(Actor):
     def __init__(self):
@@ -409,7 +434,7 @@ class Barrel(Actor):
 
     def move(self, arena):
         keys = arena.current_keys()
-        
+
         final_wall = collided_wall = platform = ladder = None
         for other in arena.collisions():
             if isinstance(other, Ladder):
@@ -420,35 +445,34 @@ class Barrel(Actor):
                 collided_wall = other
             elif isinstance(other, OilBarrel):
                 final_wall = other
-        
+
         if not platform and not ladder:
             self._dy += 1  # gravity
-            
-        
+
         # Probabilità del 10% di iniziare a scalare la scala
         if ladder:
             rand = random.random() < 0.1
-            
-        if (ladder) and (abs(ladder.pos()[1]-self.pos()[1]) <= 10):
+
+        if (ladder) and (abs(ladder.pos()[1] - self.pos()[1]) <= 10):
             descending = True
         else:
             descending = False
-        
+
         if not self._climbing and ladder and rand and descending:
             self._climbing = True
-        
+
         if self._climbing and ladder:
             barrel_x_center = self._x + self._w / 2
             ladder_x_center = ladder.pos()[0] + ladder.size()[0] / 2
-            
+
             # Controlla se il Barrel è al centro della scala
             if abs(barrel_x_center - ladder_x_center) < 5:
                 self._y += self._speed
             else:
                 self._climbing = False
-        
+
         if collided_wall:
-            self._direction *= -1 # swap direction
+            self._direction *= -1  # swap direction
         elif final_wall:
             arena.kill(self)  # Rimuove il Barrel dall'arena
         elif platform and not ladder:
@@ -456,22 +480,21 @@ class Barrel(Actor):
             if self._dy >= 0:
                 self._y = other_y - self._h
                 self._dy = 0
-            
+
             if self._climbing:
                 self._climbing = False
                 self._direction *= -1
-        
-        
+
         arena_w, arena_h = arena.size()
-        
+
         # Se il Barrel sta salendo, limita il movimento orizzontale solo quando è sulla scala
         if self._climbing and ladder:
             pass
         else:
             self._x = (self._x + self._dx * self._direction) % arena_w
-        
+
         self._y = self._y + self._dy
-        
+
     def pos(self):
         return self._x, self._y
 
@@ -486,13 +509,14 @@ class Barrel(Actor):
             self._w = 12
             return 66, 258
 
+
 class IdleBarrel(Actor):
     def __init__(self, pos):
         self._pos = pos
         self._w, self._h = 9, 14
-        
+
     def move(self, arena):
-        pass   
+        pass
 
     def pos(self):
         return self._pos
@@ -502,6 +526,7 @@ class IdleBarrel(Actor):
 
     def sprite(self):
         return 113, 264
+
 
 if __name__ == "__main__":
     game = GameGUI()
