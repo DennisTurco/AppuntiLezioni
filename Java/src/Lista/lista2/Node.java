@@ -1,5 +1,4 @@
 package Lista.lista2;
-package Lista.lista2.src;
 
 public class Node {
     private int info;  // dato che contiene il nodo (in questo caso è intero)

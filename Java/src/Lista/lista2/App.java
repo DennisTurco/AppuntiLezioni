@@ -1,5 +1,4 @@
 package Lista.lista2;
-package Lista.lista2.src;
 
 public class App {
     public static void main(String[] args) throws Exception {

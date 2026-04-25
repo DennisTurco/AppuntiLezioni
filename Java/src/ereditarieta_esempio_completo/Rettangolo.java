@@ -5,7 +5,7 @@ public class Rettangolo {
     // attributi
     private int base;
     private int altezza;
-    
+
     // costruttore senza parametri
     public Rettangolo() {
         this.base = 0;

@@ -1,5 +1,5 @@
 package Lista.lista2;
-package Lista.lista2.src;
+
 public class Lista {
     private Node head;
     private int dim;

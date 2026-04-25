@@ -4,13 +4,13 @@ package Java.src.ereditarieta_esempio_completo;
 public class Quadrato extends Rettangolo{
     // in questo caso questa classe non ha attributi
     // perchè già tutti contenuti nella classe base
-    
+
     // costruttore senza parametri
     public Quadrato() {
         super();
     }
 
-    // costruttore con un parametro 
+    // costruttore con un parametro
     public Quadrato(int lato){
         super(lato, lato);
     }
@@ -21,6 +21,7 @@ public class Quadrato extends Rettangolo{
     }
 
     // metodo
+    @Override
     public int perimetro() {
         // invoca il metodo perimetro della classe base
         return super.perimetro();

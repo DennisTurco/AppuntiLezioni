@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.After;
 
 public class DeterminatoreVotoTest {
-    
+
     private DeterminatoreVoto determinatore;
 
     /*

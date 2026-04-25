@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.classi.esempioCompleto.Main",
+      "projectName": "AppuntiLezioni_49c25467"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.classi.Main",
+      "projectName": "AppuntiLezioni_49c25467"
+    },
+    {
+      "type": "java",
+      "name": "Funzioni",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.Funzioni",
+      "projectName": "AppuntiLezioni_49c25467"
+    },
+    {
+      "type": "java",
       "name": "HelloWorld",
       "request": "launch",
       "mainClass": "CorsoMinecraft.HelloWorld",
