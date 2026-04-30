@@ -1,8 +1,8 @@
-<html>  
-<head>  
-  <title>test inserimento in php</title>  
-</head>  
-<body>    
+<html>
+<head>
+  <title>test inserimento in php</title>
+</head>
+<body>
 <form action="insertPersonaggio.php" method="GET"><BR>
 inserimento di un nuovo personaggio della saga di Harry Potter<BR><BR>
 ID_personaggio:<input type="text" name="id_personaggio" placeholder="ID_personaggio" required>
@@ -14,12 +14,12 @@ Casa di appartenenza:<BR>
 
 	$query="SELECT * FROM casehw";
 
-	//esecuzione della query 
+	//esecuzione della query
 	$result=mysqli_query($conn,$query);
 	if ($result)
 	{echo "query eseguita correttamente" OR die("errore in esecuzione della query"); 
    }
-	
+
 	?>
 	<select name="casata">
 	<?php
@@ -38,9 +38,9 @@ Casa di appartenenza:<BR>
 	else
 		echo"nessuna casata nel db";
 	?>
-	
+
 </select><BR><BR>
-	
+
 <p><input type="submit" value="inserisci personaggio"></p>
 </form>
 </body>  
