@@ -27,6 +27,9 @@ class VeicoloMotoreSuStrada(Veicolo):
     def __str__(self):
         return super().__str__() + f", ruote: {self.numero_ruote}, cilindrata: {self.cilindrata}"
 
+    def accendi_spegni_aria_condizionata(self):
+        print("Aria condizionata")
+
 
 # classe figlia
 class Macchina(VeicoloMotoreSuStrada):
