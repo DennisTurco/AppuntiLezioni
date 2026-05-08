@@ -5,6 +5,34 @@
       "type": "java",
       "name": "Main",
       "request": "launch",
+      "mainClass": "CorsoMinecraft.ereditarieta.Main",
+      "projectName": "AppuntiLezioni_645ae129"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.classi.esempioClasseConStatic.Main",
+      "projectName": "AppuntiLezioni_645ae129"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.classi.esempioCompleto.Main",
+      "projectName": "AppuntiLezioni_645ae129"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CorsoMinecraft.classi.esempioBase.Main",
+      "projectName": "AppuntiLezioni_645ae129"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
       "mainClass": "CorsoMinecraft.classi.esempioCompleto.Main",
       "projectName": "AppuntiLezioni_49c25467"
     },
