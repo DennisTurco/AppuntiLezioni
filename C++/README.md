@@ -1,4 +1,28 @@
-# Guida alla compilazione di file C++
+# Esercizi C++
+
+Raccolta di esercizi e lezioni di programmazione in C++, dai concetti base fino a classi, template e strutture dati.
+
+## Contenuti
+
+| Cartella | Argomento |
+| --- | --- |
+| `blocchi_condizionali/` | Istruzioni condizionali (`if`) |
+| `cicli/` | Cicli (`for`, `while`) |
+| `array/` | Array statici e dinamici |
+| `funzioni/` | Funzioni e ordinamento/ricerca |
+| `puntatori/`, `puntatori_intelligenti/` | Puntatori grezzi e smart pointer |
+| `struct/`, `header_file/` | Strutture dati e organizzazione in file header/sorgente |
+| `classi/`, `classi_astratte_e_concrete/` | Programmazione a oggetti, classi astratte |
+| `templates/` | Template di funzione e di classe |
+| `lambda/` | Espressioni lambda |
+| `set/`, `map/` | Contenitori della STL |
+| `file/` | Lettura e scrittura su file |
+| `algorithms/` | Algoritmi di ricerca e ordinamento (binary search, BFS/DFS, quick sort...) |
+| `indovina_output/` | Esercizi "indovina l'output" per capire il comportamento del linguaggio |
+| `random/` | Numeri casuali |
+| `giochi/` | Piccoli giochi (Battaglia Navale) |
+| `Matrici/` | Esercizi su matrici |
+| `esami/` | Tracce ed esempi di esame |
 
 ## Info utili
 

@@ -6,16 +6,20 @@ Questa repository raccoglie tutte le **lezioni** e gli **esercizi svolti** duran
 
 ## Contenuti
 
-All’interno troverai esempi, esercizi e spiegazioni su diversi linguaggi e tecnologie, tra cui:
+All’interno troverai esempi, esercizi e spiegazioni su diversi linguaggi e tecnologie:
 
-- **C**
-- **C++**
-- **Java**
-- **C#**
-- **SQL**
-- …e altri ancora!
+- [**C**](C/README.md)
+- [**C++**](C++/README.md)
+- [**C#**](C%23/README.md)
+- [**Java**](Java/README.md)
+- [**PHP**](PHP/README.md)
+- [**SQL**](SQL/README.md)
+- [**Python**](python/README.md)
+- [**HTML**](HTML/README.md)
+- [**Matematica**](matematica/README.md)
+- [**Flowchart**](flowchart/README.md)
 
-Ogni cartella o file corrisponde a una lezione o a un set di esercizi.
+Ogni cartella ha un proprio README con l'elenco degli argomenti trattati e le istruzioni per eseguire gli esercizi. Ogni sotto-cartella o file corrisponde a una lezione o a un set di esercizi.
 
 ## Come utilizzare la repo
 
