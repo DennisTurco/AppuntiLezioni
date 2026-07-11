@@ -4,8 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
-
-    // punto iniziale di un rpogramma in java
     public static void main(String[] args) {
         Studente s1 = new Studente("Anna", "Bianchini", 'H', 16);
         Studente s2 = new Studente("Marco", "Rossini", 'A', 18);
@@ -37,8 +35,8 @@ public class Main {
 
         // dimostrazione di polimorfismo: Studente e Insegnante sono entrambi delle Persona
         List<Persona> persone = List.of(s1, s2, i1, i2);
-        for (Persona p : persone) {
-            System.out.println(p.toString());
+        for (int i = 0; i < persone.size(); i++) {
+            System.out.println(persone.get(i).toString());
         }
     }
 }

@@ -5,6 +5,20 @@
       "type": "java",
       "name": "Main",
       "request": "launch",
+      "mainClass": "casting.Main",
+      "projectName": "AppuntiLezioni_49c25467"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "EsercizioStudenteBaseEreditarieta.Main",
+      "projectName": "AppuntiLezioni_49c25467"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
       "mainClass": "CorsoMinecraft.ereditarieta.Main",
       "projectName": "AppuntiLezioni_645ae129"
     },

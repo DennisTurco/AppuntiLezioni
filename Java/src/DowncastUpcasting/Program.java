@@ -1,4 +1,5 @@
 package DowncastUpcasting;
+
 public class Program {
     public static void main(String[] args) throws Exception {
         Persona persona = new Persona("Carlo", "Magno", "SDGSHJGFDui23yDSDGH");
@@ -28,7 +29,7 @@ public class Program {
         StampaInfoStudente(persona); // oggetto Persona -> no cast
         StampaInfoStudente(persona1); // oggetto Studente castato a Persona -> va bene
 
-        System.out.println("\n--- DOWNCASTING NON SICURO (CON CONTROLLO instanceof) ---");
+        System.out.println("\n--- DOWNCASTING SICURO (CONTROLLO instanceof) ---");
         if (persona instanceof Studente) {
             Studente studente2 = (Studente) persona;
             System.out.println("Downcasting riuscito: Persona -> Studente (studente2)");

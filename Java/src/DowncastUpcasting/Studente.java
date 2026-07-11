@@ -1,12 +1,14 @@
 package DowncastUpcasting;
-public class Studente extends Persona{
+
+public class Studente extends Persona {
     private String matricola;
 
-    public Studente(String nome, String cognome, String CF, String matricola) {
+    public Studente (String nome, String cognome, String CF, String matricola) {
         super(nome, cognome, CF);
         this.matricola = matricola;
     }
 
+    @Override
     public void saluta() {
         System.out.println("Ciao dallo studente: " + getNome());
     }
