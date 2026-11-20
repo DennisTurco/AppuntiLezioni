@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="media_pari"/>
+        <attribute name="authors" value="Dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-19 08:11:47 "/>
+        <attribute name="created" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTE5OyIwNzozODo0NSAiOzI4MjM="/>
+        <attribute name="edited" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTE5OyIwODoxMTo0NyAiOzE7MjkyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="somma" type="Integer" array="False" size=""/>
+            <declare name="valori" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quanti valori vuoi inserire? &quot;" newline="False"/>
+            <input variable="valori"/>
+            <assign variable="somma" expression="0"/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="pari" type="Integer" array="False" size=""/>
+            <assign variable="pari" expression="0"/>
+            <for variable="i" start="0" end="valori-1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero % 2 == 0">
+                    <then>
+                        <assign variable="somma" expression="somma + numero"/>
+                        <assign variable="pari" expression="pari + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="pari &gt; 0">
+                <then>
+                    <assign variable="media" expression="somma / pari"/>
+                </then>
+                <else>
+                    <assign variable="media" expression="0"/>
+                </else>
+            </if>
+            <output expression="&quot;Somma = &quot; &amp; somma &amp; &quot; Media = &quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

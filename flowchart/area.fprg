@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="area"/>
+        <attribute name="authors" value="Dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-19 07:36:44 "/>
+        <attribute name="created" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTE5OyIwNzoyMDozNSAiOzI4MTM="/>
+        <attribute name="edited" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTE5OyIwNzozNjo0NCAiOzE7MjkyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="raggio" type="Real" array="False" size=""/>
+            <declare name="area" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci il valore del raggio&quot;" newline="False"/>
+            <input variable="raggio"/>
+            <assign variable="area" expression="raggio * raggio * 3.14"/>
+            <output expression="&quot;Area = &quot; &amp; area &amp; &quot;. Diametro = &quot; &amp; raggio*2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
