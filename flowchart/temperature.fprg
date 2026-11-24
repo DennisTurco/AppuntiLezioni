@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="temperature"/>
+        <attribute name="authors" value="Dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-24 06:34:48 "/>
+        <attribute name="created" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTI0OyIwNjowMzo0MCAiOzI4MDU="/>
+        <attribute name="edited" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTI0OyIwNjozNDo0OCAiOzU7MjkyOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Informazioni media temperatura con ntemperature inserite dall'utente"/>
+            <declare name="temperatura" type="Real" array="False" size=""/>
+            <declare name="somma" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="ntemperature" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quante temperature vuoi inserire? &quot;" newline="False"/>
+            <input variable="ntemperature"/>
+            <assign variable="somma" expression="0"/>
+            <for variable="i" start="0" end="ntemperature-1" direction="inc" step="1">
+                <output expression="&quot;Inserisci la temperatura: &quot;" newline="False"/>
+                <input variable="temperatura"/>
+                <assign variable="somma" expression="somma + temperatura"/>
+            </for>
+            <if expression="ntemperature &gt; 0">
+                <then>
+                    <assign variable="media" expression="somma / ntemperature"/>
+                    <output expression="&quot;Temperatura media = &quot; &amp; media" newline="False"/>
+                </then>
+                <else>
+                    <output expression="&quot;Impossibile calcolare la media senza temperature&quot;" newline="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="max_e_min"/>
+        <attribute name="authors" value="Dennis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-24 07:00:34 "/>
+        <attribute name="created" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTI0OyIwNjozNToyOSAiOzI4MTc="/>
+        <attribute name="edited" value="RGVubmlzO0RFU0tUT1AtMkVOMjk2RTsyMDI2LTExLTI0OyIwNzowMDozNCAiOzM7MjkxNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="leggi N numeri e stampa il massimo e il minimo.&#13;&#10;&#13;&#10;Da fare volendo: cercare il minimo e il massimo pari. oppure cercare il minimo e il massimo sia pari che dispari"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quanti numeri vuoi inserire? &quot;" newline="False"/>
+            <input variable="n"/>
+            <assign variable="max" expression="0"/>
+            <assign variable="min" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Inserisci un numero: &quot;" newline="False"/>
+                <input variable="numero"/>
+                <if expression="i == 0 || numero &gt; max">
+                    <then>
+                        <assign variable="max" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="i == 0 || numero &lt; min">
+                    <then>
+                        <assign variable="min" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Max = &quot; &amp; max &amp; &quot;, Min = &quot; &amp; min" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
